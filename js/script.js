@@ -20,7 +20,7 @@ function loadData() {
     $greeting.text("So, you want to live in " + address + '?');
     $body.append('<img class="bgimg" src="'+streetViewUrl+'">');
     //load New York Times' Articles 
-    var nyApiKey = "3efc62d1c3f59f3f56ba7f84549ab6c1:4:73883147";
+    var nyApiKey = "";
     var NYTapiurl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q='+cityValue+'&sort=newest&api-key='+nyApiKey;
     $.getJSON(NYTapiurl, function (data){
         var articles = data.response.docs;
